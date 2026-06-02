@@ -17,7 +17,6 @@ with intelligent, explainable recommendations.
 ##  Architecture
 User Query
 │
-▼
 FastAPI Backend
 ├── Case 1: Employee → Jobs
 │   SQL (get skills) → FAISS semantic search
