@@ -2,9 +2,9 @@ import streamlit as st
 import time
 import os
 import pandas as pd
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 
-load_dotenv()
+# load_dotenv()
 
 st.set_page_config(
     page_title="RMG Talent Matcher",
