@@ -1,8 +1,3 @@
-"""
-file.py — RMG Talent Matcher UI
-Run: streamlit run file.py
-"""
-
 import streamlit as st
 import time
 import os
@@ -11,9 +6,6 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-# ─────────────────────────────────────────────
-# PAGE CONFIG
-# ─────────────────────────────────────────────
 st.set_page_config(
     page_title="RMG Talent Matcher",
     page_icon="🤝",
@@ -21,10 +13,6 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-
-# ─────────────────────────────────────────────
-# LOAD RESOURCES ONCE
-# ─────────────────────────────────────────────
 @st.cache_resource
 def load_all():
     from langchain_groq import ChatGroq
@@ -32,8 +20,11 @@ def load_all():
     from langchain_community.vectorstores import FAISS
     from utils import set_vs_global
 
-    # ── FIXED: use only .env, no st.secrets ──
-    groq_key = os.getenv("GROQ_API_KEY")
+    # groq_key = os.getenv("GROQ_API_KEY")
+    groq_key = (
+        st.secrets.get("GROQ_API_KEY", None)
+        or os.getenv("GROQ_API_KEY")
+    )
 
     llm = ChatGroq(
         model="llama-3.3-70b-versatile",
