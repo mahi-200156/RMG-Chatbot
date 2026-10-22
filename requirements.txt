@@ -5,9 +5,10 @@ langchain==0.2.0
 langchain-groq==0.1.6
 langchain-community==0.2.0
 langchain-huggingface==0.0.3
+langgraph==0.4.5
 faiss-cpu==1.8.0
 pandas==2.2.2
-pydantic==2.7.1
+pydantic>=2.7.4,<3
 sqlalchemy==2.0.30
 sentence-transformers==3.0.1
 streamlit==1.35.0
