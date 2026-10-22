@@ -10,7 +10,7 @@ It runs as a **Streamlit app** and a **FastAPI backend**, and the smart-chat age
 - **ReAct** (original): the first version, which parses the model's text output. Kept so the two can be compared.
 
 # Live Demo
- [**Try the app here**] (https://rmg-chatbot.streamlit.app/)
+ [**Try the app here**](https://rmg-chatbot.streamlit.app/)
 
 # Problem Statement
 When an employee's process closes and they go on bench, Resource Management Group (RMG) must manually screen CVs to find suitable internal roles — slow, inconsistent, and dependent on recruiter memory.
